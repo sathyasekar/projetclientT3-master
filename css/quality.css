@@ -1,0 +1,50 @@
+main {
+    margin: 0 0 20px 0;
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+}
+
+main article {
+    margin: 0 auto;
+    width: 35vw;
+}
+
+h1,
+h2 {
+    color: #4c90d6;
+}
+
+h1 {
+    width: 400px;
+    margin-left: -50px;
+    border-bottom: 0.5px solid #4c90d6;
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+@media screen and (min-height: 900px) {
+    main {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    html,
+    body {
+        width: 100vw;
+    }
+    article h1 {
+        width: 150%;
+    }
+    article p {
+        width: 150%;
+    }
+    article h2,
+    article p {
+        margin-left: -40px;
+    }
+}

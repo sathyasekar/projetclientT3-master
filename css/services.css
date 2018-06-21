@@ -1,0 +1,321 @@
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+#presentationOne {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60vw;
+    margin: 0 auto 30px auto;
+}
+
+#presentationOne.change {
+    width: 300px;
+    margin: 0 auto 0 auto;
+}
+
+#presentationTwo {
+    width: 100vw;
+}
+
+div[class^="miniTitle"] {
+    border: 1px solid rgb(83, 186, 255);
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+div[class^="miniTitle"]:hover,
+div[class^="miniTitle"]:active {
+    background-color: #4c90d6;
+    transition: 0.5s;
+    border: 1px solid #4c90d6;
+    width: 150px;
+    height: 150px;
+    transform: scale(1.2);
+    cursor: pointer;
+    color: white;
+}
+
+div[class^="subject"] {
+    display: none;
+}
+
+div[class^="subject"].read {
+    display: block;
+    width: 90vw;
+    margin: 10px auto 50px auto;
+    padding-top: 10px;
+}
+
+div[class^="subject"].read ol,
+div[class^="subject"].read ul {
+    padding: 0;
+}
+
+div[class^="subject"].read .accordion legend {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 16px;
+}
+
+.subSection {
+    border: 1px solid black;
+    max-width: 550px;
+    margin: 10px;
+}
+
+.paragraphe {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    width: 100vw;
+}
+
+h3 {
+    text-align: center;
+}
+
+div[class^="miniTitle"].notSee {
+    display: none;
+}
+
+@media screen and (min-height: 1050px) {
+    #presentationOne {
+        margin: 0 auto 30vh auto;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    div[class^="miniTitle"],
+    div[class^="miniTitle"]:hover,
+    div[class^="miniTitle"]:active {
+        width: 300px;
+        height: 300px;
+    }
+    #presentationOne {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {
+    div[class^="miniTitle"],
+    div[class^="miniTitle"]:hover,
+    div[class^="miniTitle"]:active {
+        width: 150px;
+        height: 150px;
+    }
+    #presentationOne {
+        width: 80%;
+    }
+}
+
+.accordion dl,
+.accordion-list {
+    border: 1px solid #ddd;
+}
+
+.accordion dl:after,
+.accordion-list:after {
+    content: "";
+    display: block;
+    height: 1em;
+    width: 100%;
+    background-color: #3a74af;
+}
+
+.accordion dd,
+.accordion__panel {
+    background-color: #eee;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.accordion p {
+    padding: 0.5em 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: 0.5s;
+}
+
+.accordion ul li {
+    padding: 0em 2em;
+    transition: 0.5s;
+}
+
+.accordion ul {
+    margin: 0;
+    transition: 0.5s;
+}
+
+.accordion-content.accordionItem.is-expanded.animateIn {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.accordion {
+    position: relative;
+    background-color: #eee;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2em 0 2em 0;
+}
+
+.accordionTitle,
+.accordion__Heading {
+    background-color: #4c90d6;
+    text-align: center;
+    font-weight: 700;
+    padding: 2em;
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.5s ease-in-out;
+    border-bottom: 1px solid #3a74af;
+}
+
+.accordionTitle:before,
+.accordion__Heading:before {
+    content: "+";
+    font-size: 1.5em;
+    line-height: 0.5em;
+    float: left;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.accordionTitle:hover,
+.accordion__Heading:hover {
+    background-color: #3a74af;
+}
+
+.accordionTitleActive,
+.accordionTitle.is-expanded {
+    background-color: #3a74af;
+}
+
+.accordionTitleActive:before,
+.accordionTitle.is-expanded:before {
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+}
+
+.accordionItem {
+    height: auto;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+
+@media screen and (min-width: 48em) {
+    .accordionItem {
+        transition: max-height 0.5s;
+    }
+}
+
+.accordionItem.is-collapsed {
+    max-height: 0;
+}
+
+.no-js .accordionItem.is-collapsed {
+    max-height: auto;
+}
+
+.animateIn {
+    -webkit-animation: accordionIn 0.45s normal ease-in-out both 1;
+    animation: accordionIn 0.45s normal ease-in-out both 1;
+}
+
+.animateOut {
+    -webkit-animation: accordionOut 0.45s alternate ease-in-out both 1;
+    animation: accordionOut 0.45s alternate ease-in-out both 1;
+}
+
+@-webkit-keyframes accordionIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.9) rotateX(-60deg);
+        transform: scale(0.9) rotateX(-60deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes accordionIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0.9) rotateX(-60deg);
+        transform: scale(0.9) rotateX(-60deg);
+        -webkit-transform-origin: 50% 0;
+        transform-origin: 50% 0;
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@-webkit-keyframes accordionOut {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.9) rotateX(-60deg);
+        transform: scale(0.9) rotateX(-60deg);
+    }
+}
+
+@keyframes accordionOut {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(0.9) rotateX(-60deg);
+        transform: scale(0.9) rotateX(-60deg);
+    }
+}
+
+img.back {
+    display: block;
+    width: 50px;
+}
+
+div.back {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    margin-left: 10px;
+
+}

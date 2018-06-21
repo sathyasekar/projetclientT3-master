@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1964.6 1964.6" style="enable-background:new 0 0 1964.6 1964.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#9BCDFF;}
+	.st1{fill:#42ABFC;}
+</style>
+<g>
+	<circle class="st0" cx="982.3" cy="982.3" r="982.3"/>
+	<g>
+		<g id="directions-subway">
+			<path class="st1" d="M982.3,156c-377.2,0-685.7,42.9-685.7,342.9v814.3c0,162.9,137.1,300,300,300L468,1741.8v42.9h1028.6v-42.9
+				L1368,1613.2c162.9,0,300-137.1,300-300V498.9C1668.1,198.9,1359.5,156,982.3,156z M596.6,1441.8c-68.6,0-128.6-60-128.6-128.6
+				c0-68.6,60-128.6,128.6-128.6s128.6,60,128.6,128.6C725.2,1381.8,665.2,1441.8,596.6,1441.8z M896.6,927.5H468V498.9h428.6V927.5
+				z M1368,1441.8c-68.6,0-128.6-60-128.6-128.6c0-68.6,60-128.6,128.6-128.6c68.6,0,128.6,60,128.6,128.6
+				C1496.6,1381.8,1436.6,1441.8,1368,1441.8z M1496.6,927.5H1068V498.9h428.6V927.5z"/>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,44 @@
+main {
+    height: calc(100vh - 75px);
+    min-height: 590px;
+    max-height: 1000px;
+}
+
+main img {
+    width: 10%;
+    height: 10%;
+    margin: 20px;
+}
+
+div[class*="info"] {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+}
+
+div[class*="info"] div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 60px 20px 30px;
+}
+
+main div span,
+main div p {
+    margin: 5px 0;
+    font-size: 80%;
+}
+
+.contact {
+    width: 375px;
+    position: absolute;
+    background: #4c90d6;
+    top: 195px;
+    left: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .contact {
+        width: 100vw;
+    }
+}
